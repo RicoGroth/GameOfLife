@@ -7,10 +7,7 @@ void OpenGLView::draw()
     //TODO:
 }
 
-void OpenGLView::update(
-    const std::vector<std::tuple<int, int, bool>>& updated_fields,
-    int number_of_columns,
-    int number_of_rows
-) {
+void OpenGLView::update(const std::vector<std::tuple<int, int, bool>>& updated_fields)
+{
     //TODO:
 }
