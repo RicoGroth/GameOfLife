@@ -4,6 +4,7 @@ set(SRC ${CMAKE_CURRENT_SOURCE_DIR}/src)
 add_executable(${CMAKE_PROJECT_NAME}
     ${SRC}/main.cpp
     ${SRC}/Game.cpp
+    ${SRC}/TerminalView.cpp
 )
 target_include_directories(${CMAKE_PROJECT_NAME}
     PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include

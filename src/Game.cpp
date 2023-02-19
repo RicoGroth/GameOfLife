@@ -1,18 +1,15 @@
+#include <vector>
 #include "Game.hpp"
 #include "View.hpp"
 
-Game::Game(int x_size, int y_size)
-    : m_cells(y_size), m_current_iteration{0}, m_views{}
+Game::Game(int number_of_columns, int number_of_rows)
+    : m_cells(number_of_columns * number_of_rows), m_current_iteration{0}, m_views{}, m_x_size{number_of_columns}, m_y_size{number_of_rows}
 {
-    for(auto& row : m_cells)
-    {
-        row.resize(x_size);
-    }
 }
 
 void Game::register_view(View* view)
 {
-    //TODO:
+    m_views.push_back(view);
 }
 
 void Game::run(int number_of_iterations)
@@ -20,7 +17,7 @@ void Game::run(int number_of_iterations)
     for(int i{0}; i < number_of_iterations; ++i)
     {
         ++m_current_iteration;
-        //TODO:
+        std::vector<bool> last_generation = m_cells;
     }
 }
 

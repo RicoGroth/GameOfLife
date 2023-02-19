@@ -6,5 +6,9 @@
 class View
 {
 public:
-    virtual void update(const std::vector<std::tuple<int, int, bool>> update_fields) = 0;
+    virtual void update(
+        const std::vector<std::tuple<int, int, bool>> updated_fields,
+        int number_of_columns,
+        int number_of_rows
+    ) = 0;
 };
